@@ -1,0 +1,413 @@
+:root {
+    /* CSS Variables for reusability */
+    --header-color: #445e16;
+    --subheader-color: #6a8a2e;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --link-color: #ff5252;
+    --default-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --header-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    /* Global reset for margins, padding, and box-sizing */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Body styles: background, text color, font, and line height */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--default-font-family);
+    line-height: 1.6;
+}
+
+html,
+body {
+    /* Ensure full height coverage and prevent horizontal overflow */
+    height: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    /* Link styles */
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    /* Link hover effect */
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    width: 100vw;
+    height: calc(15vh - 1rem);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 2rem;
+    font-family: var(--header-font-family);
+    font-size: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    /* Logo image size */
+    max-width: 123px;
+}
+
+header summary {
+    /* Summary text in the header */
+    font-size: 2rem;
+}
+
+/* Currency Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    width: 100vw;
+    height: 65vh;
+    gap: 3rem;
+    font-family: var(--default-font-family);
+}
+
+#currency-section {
+    /* Currency section layout */
+    width: 20vw;
+    height: 100%;
+    display: flex;
+    margin-right: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#currency-section .currency {
+    /* Currency block styling */
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 1em 0 0 2em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#currency-section .currency:hover {
+    /* Hover effect on currency blocks */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0.3;
+}
+
+/* Currency section hover interaction */
+#currency-section:hover .currency {
+    opacity: 0.3;
+}
+
+#currency-section .currency:hover {
+    opacity: 1;
+}
+
+/* Currency content */
+.currency-content {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.currency-content h4 {
+    /* Currency title font size */
+    font-size: 1rem;
+}
+
+.currency-content p {
+    /* Currency description font size */
+    font-size: 0.8rem;
+}
+
+.currency-content img {
+    /* Currency image size */
+    width: 2.5rem;
+}
+
+/* Bank News Section */
+#bank-news-section {
+    /* Bank news section layout */
+    width: 50vw;
+    height: 100%;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#bank-news-section h1 {
+    /* Main header in bank news section */
+    font-size: 2rem;
+    color: var(--header-color);
+    text-align: left;
+}
+
+#bank-news-section h2 {
+    /* Subheader in bank news section */
+    font-size: 1.5rem;
+    color: var(--subheader-color);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Personal Information Section */
+#personal-information-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 30vw;
+    padding: 1rem;
+    margin: 1rem 0.5rem 0;
+    gap: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.personal-information,
+.account-balance,
+.account-expenses {
+    /* Personal info, account balance, and expenses blocks */
+    background-color: white;
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.personal-information img {
+    /* Avatar image styling */
+    width: 4rem;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Section headers and text styling */
+.personal-information h2,
+.account-balance h2,
+.account-expenses h2 {
+    font-size: 1.2rem;
+    color: var(--subheader-color);
+}
+
+.personal-information p,
+.account-balance p,
+.account-expenses p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.balance-header img,
+.expenses-header img {
+    /* Icon sizes for balance and expenses */
+    width: 3em;
+}
+
+/* Footer Section */
+footer {
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer>section {
+    /* Footer section layout */
+    height: calc(100% - 2rem);
+    width: 33%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#bank-contact-information,
+#bank-contact-information div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer section headers */
+#bank-contact-information h4 {
+    color: var(--subheader-color);
+}
+
+#bank-social-media-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-media-icon img {
+    /* Social media icon size */
+    width: 2.5rem;
+}
+
+.social-media-icon:hover {
+    /* Hover effect for social media icons */
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#bank-legal-informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Handle height under 900px */
+@media screen and (max-height: 900px) {
+    header {
+        height: auto;
+        overflow-y: scroll;
+        margin-bottom: 1rem;
+    }
+
+    main {
+        height: 40rem;
+        padding-right: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        height: auto;
+        overflow-y: scroll;
+        margin-bottom: 0.5rem;
+    }
+
+    footer>section {
+        height: 10rem;
+    }
+}
+
+/* Adjustments for screens under 1100px width */
+@media screen and (max-width: 1100px) {
+    header {
+        height: auto;
+        margin-bottom: 1.2rem;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        height: fit-content;
+        padding: 0;
+    }
+
+    footer {
+        gap: 0.5rem;
+    }
+
+    #currency-section,
+    #bank-news-section,
+    #personal-information-section {
+        width: 90%;
+    }
+
+    #currency-section {
+        margin: 0 auto;
+    }
+
+    #currency-section .currency {
+        margin-left: 0;
+    }
+
+    #bank-news-section,
+    #personal-information-section {
+        margin: 0 auto;
+    }
+
+    footer section {
+        width: 90%;
+    }
+}
+
+/* Handle screens under 900px */
+@media (max-width: 900px) {
+    header {
+        padding: 1em;
+        font-size: 1em;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    footer section {
+        width: 80%;
+        height: calc(fit-content + 1rem);
+    }
+}
+
+/* Further adjustments for screens under 700px */
+@media screen and (max-width: 700px) {
+    header {
+        flex-direction: column;
+        font-size: 1.2em;
+        padding-top: 0.298em;
+        margin-bottom: 1em;
+    }
+
+    .social-media-icon img {
+        width: 2.2rem;
+    }
+}
+
+/* Handle screens under 600px */
+@media screen and (max-width: 600px) {
+
+    .personal-information img,
+    .balance-header img,
+    .expenses-header img {
+        width: 2rem;
+    }
+
+    .currency-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .currency-content p {
+        font-size: 0.7rem;
+    }
+
+    .social-media-icon img {
+        width: 2rem;
+    }
+}
+
+/* Final adjustments for screens under 450px */
+@media screen and (max-width: 450px) {
+    header summary {
+        font-size: 1rem;
+    }
+}
